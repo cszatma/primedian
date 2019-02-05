@@ -12,5 +12,13 @@ module.exports = {
   ],
   rules: {
     'no-console': 'off'
-  }
+  },
+  overrides: [
+    {
+      files: ['**/*.test.js'],
+      env: {
+        jest: true
+      }
+    }
+  ]
 };
