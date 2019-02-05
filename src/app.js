@@ -1,10 +1,15 @@
 const express = require('express');
 
 const primeRoutes = require('./routes/prime');
+const errorHandlers = require('./middlewares/error-handlers');
 
 const app = express();
 
 app.use('/', primeRoutes);
+
+// Register the error handlers
+app.use(errorHandlers.handleErrorType);
+app.use(errorHandlers.handleUncaughtError);
 
 // If in production mode server the client files
 // This is not necessary in development as the webpack dev server provided by create-react-app will be running
