@@ -56,5 +56,15 @@
     "hooks": {
       "pre-commit": "npm run precommit"
     }
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "singleQuote": true
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "<rootDir>/client/"
+    ]
   }
 }
