@@ -19,6 +19,14 @@ router.get('/api/median-prime', (req, res) => {
   }
 
   const n = parseInt(req.query.n, 10);
+
+  // Make sure n is greater than 2 as there are no primes less than 2
+  if (n < 3) {
+    const err = new Error('Query parameter n must be greater than 2.');
+    err.type = errorTypes.invalidValue;
+    throw err;
+  }
+
   const primes = computePrimes(n);
 
   res.json(median(primes));

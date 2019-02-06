@@ -1,6 +1,7 @@
 const errorTypes = {
   missingParameter: 1,
   invalidParameterType: 2,
+  invalidValue: 3,
 };
 
 exports.errorTypes = errorTypes;
@@ -17,6 +18,9 @@ exports.handleErrorType = (err, req, res, next) => {
       break;
     case errorTypes.invalidParameterType:
       res.statusMessage = 'Invalid parameter type provided.';
+      break;
+    case errorTypes.invalidValue:
+      res.statusMessage = 'Invalid value assigned to parameter.';
       break;
     default:
       return next(err);
