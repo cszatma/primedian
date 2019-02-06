@@ -1,5 +1,5 @@
 module.exports = array => {
-  if (!Array.isArray(array) || !ArrayBuffer.isView(array)) {
+  if (!Array.isArray(array) && !ArrayBuffer.isView(array)) {
     throw new TypeError('Argument must be an array.');
   }
 
