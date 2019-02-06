@@ -35,7 +35,7 @@ console.log(
 
 const serverProgram = () => ({
   command: require.resolve(`${paths.appNodeModules}/nodemon/bin/nodemon`),
-  args: [paths.appIndex],
+  args: [paths.appIndex, '-i', 'client/'],
 });
 
 const reactScriptsStart = `${paths.reactScripts}/start`;
