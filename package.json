@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "10.13.0",
-    "yarn": "1.12.3"
+    "node": ">= 8.0.0",
+    "yarn": "1.x"
   },
   "dependencies": {
     "express": "^4.16.4"
@@ -30,6 +30,7 @@
     "dev": "node scripts start",
     "format": "prettier --write \"src/**/*.js\"",
     "lint": "eslint --fix",
+    "postinstall": "node scripts install",
     "precommit:server": "lint-staged",
     "precommit:client": "npm run precommit --prefix client",
     "precommit": "npm-run-all precommit:*",
