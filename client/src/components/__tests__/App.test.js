@@ -1,9 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from '../App';
+import { shallow } from 'enzyme';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+import App from '../App';
+import MedianPrimeGenerator from '../MedianPrimeGenerator';
+
+describe('App tests', () => {
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<App />);
+  });
+
+  it('should render the component', () => {
+    expect(wrapper).toHaveLength(1);
+  });
+
+  it('should render a MedianPrimeGenerator', () => {
+    expect(wrapper.contains(<MedianPrimeGenerator />)).toBe(true);
+  });
 });
