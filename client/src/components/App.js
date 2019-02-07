@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <Container className={styles.AppContainer}>
         <Row className="justify-content-center">
-          <Col lg="8" md="6" sm="8" xs="8">
+          <Col xl="8" lg="8" md="10" sm="10">
             <header className="my-3">
               <Container>
                 <h1>PriMedian</h1>
