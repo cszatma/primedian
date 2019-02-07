@@ -1,8 +1,8 @@
-# primedian
+# PriMedian
 
-A web application to find the median prime in a list of the first n primes. Built using React.js and Node.js.
+PriMedian is a web application that finds the median prime in a list of the first n primes. Built using React.js and Node.js.
 
-### Usage
+## Usage
 ### Installing Dependencies
 Run either `yarn install` or `npm install` from the root directory. This will install the dependencies for both the server and the client.
 
