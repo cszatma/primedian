@@ -20,9 +20,14 @@ if (process.env.NODE_ENV === 'production') {
   // Express will server up production assets from the client
   app.use(express.static(path.resolve(__dirname, clientBuildDir)));
 
-  // Express will serve up the index.html file if it doesn't recognize the route
-  app.get('*', (req, res) => {
+  // Express will serve up the index.html file
+  app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, clientBuildDir, 'index.html'));
+  });
+
+  // Redirect if Express doesn't recognize the route
+  app.get('*', (req, res) => {
+    res.redirect('/');
   });
 }
 
