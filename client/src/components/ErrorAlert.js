@@ -15,7 +15,11 @@ const ErrorAlert = ({ error }) => {
       message = 'Please enter a valid positive integer as the upper limit.';
       break;
     case serverErrors.invalidValue:
-      message = 'Please enter a number greater than 2.';
+      message =
+        'Please enter a number ' +
+        (error.message.includes('2')
+          ? 'greater than 2.'
+          : 'less than 100 million.');
       break;
     default:
       message = 'An error occurred. Please try again.';

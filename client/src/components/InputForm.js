@@ -35,7 +35,7 @@ export default class InputForm extends Component {
             name="upperLimit"
             id="upperLimit"
             min="2"
-            placeholder="Enter a postive integer greater than 2"
+            placeholder="Enter a postive integer between 2 and 100 million"
             invalid={this.state.invalid}
             onChange={this.handleInputChange}
           />
