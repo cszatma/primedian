@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Container } from 'reactstrap';
 import axios from 'axios';
 
-import styles from '../styles/MedianPrimeGenerator.module.scss';
 import InputForm from './InputForm';
 import ResultDisplay from './ResultDisplay';
 
