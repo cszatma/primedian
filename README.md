@@ -7,9 +7,9 @@ PriMedian is a web application that finds the median prime in a list of the firs
 Run either `yarn install` or `npm install` from the root directory. This will install the dependencies for both the server and the client.
 
 ### Running the App
-To run the app in development mode run `yarn dev` or `npm run dev`. The client is available at `localhost:3000` and the server is available at `localhost:8000`.
+To run the app in development mode run `yarn dev` or `npm run dev`. The server is available at `localhost:8000` and the client is available at `localhost:3000`.
 
-Optionally you can run only one of them using either `yarn dev server` and `yarn dev client` respectively. However, running the client on its own is not recommened as it will not function properly without the server.
+Optionally you can run only one of them using either `yarn dev server` or `yarn dev client` respectively. However, running the client on its own is not recommened as it will not function properly without the server.
 
 ### Building the App
 To create a production build run `yarn build` or `npm run build` in the root directory.
