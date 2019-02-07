@@ -65,6 +65,22 @@ describe('Error Handler Middlewares tests', () => {
       expect(next.mock.calls.length).toBe(0);
     });
 
+    it('should handle a invalid value error', () => {
+      const message = 'n must be greater than 2';
+      const err = new Error(message);
+      err.type = errorTypes.invalidValue;
+
+      handleErrorType(err, req, res, next);
+
+      expect(res.statusCode).toBe(400);
+      expect(JSON.parse(res.data)).toEqual({
+        error: {
+          type: errorTypes.invalidValue,
+          message,
+        },
+      });
+    });
+
     it('should call next with the error since the type does not match any known type', () => {
       const err = new Error('Any error occurred');
       err.type = 10;

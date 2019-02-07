@@ -39,4 +39,15 @@ describe('/api/median-prime route tests', () => {
         },
       });
   });
+
+  it('should respond with an error since n is less than 3', () => {
+    return request(app)
+      .get(`${path}?n=2`)
+      .expect(400, {
+        error: {
+          type: errorTypes.invalidValue,
+          message: 'Query parameter n must be greater than 2.',
+        },
+      });
+  });
 });
