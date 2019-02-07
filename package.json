@@ -30,6 +30,7 @@
     "dev": "node scripts start",
     "format": "prettier --write \"src/**/*.js\"",
     "lint": "eslint --fix",
+    "heroku-postbuild": "node scripts build",
     "postinstall": "node scripts install",
     "precommit:server": "lint-staged",
     "precommit:client": "npm run precommit --prefix client",
