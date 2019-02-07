@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Col, Container, Row } from 'reactstrap';
+
+import styles from '../styles/App.module.scss';
+import MedianPrimeGenerator from './MedianPrimeGenerator';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <Container className={styles.AppContainer}>
+          <Row className="justify-content-center">
+            <Col lg="8" md="6" sm="8" xs="8">
+              <header className="my-3">
+                <Container>
+                  <h1>PriMedian</h1>
+                </Container>
+              </header>
+              <MedianPrimeGenerator />
+            </Col>
+          </Row>
+        </Container>
       </div>
     );
   }
